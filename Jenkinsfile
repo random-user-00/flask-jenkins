@@ -5,11 +5,18 @@ pipeline {
             customWorkspace "/data"
             }
     }
+    
     stages {
         stage('build') {
             steps {
                 sh 'python --version'
             }
         }
+    }
+    
+    post {
+        always {
+            rm -f /data/*
+            }
     }
 }
