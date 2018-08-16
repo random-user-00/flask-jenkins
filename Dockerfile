@@ -10,4 +10,4 @@ EXPOSE 80:5000
 
 ENV NAME World
 
-CMD ["python", "/app1/test_app.py"]
+CMD ["python", "/app1/appl/test_app.py"]
