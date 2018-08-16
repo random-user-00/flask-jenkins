@@ -1,14 +1,20 @@
 pipeline {
     agent { 
-        dockerfile {
+        any {
             customWorkspace "/data"
         }
     }
             
     stages {
-        stage('build') {
+        stage('create docker image') {
             steps {
-                sh 'python --version'
+                sh 'docker image build -t flask .'
+            }
+        }
+        
+        stage('run docker container') {
+            steps {
+                sh 'docker container run -it -p 5000:5000 flask'
             }
         }
     }
