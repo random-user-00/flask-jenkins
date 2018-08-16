@@ -2,7 +2,7 @@ FROM python
 
 WORKDIR /data/
 
-COPY /data /data/app1
+COPY . /data/app1
 
 RUN pip install --trusted-host pypi.python.org -r /app/app1/requirements.txt
 
