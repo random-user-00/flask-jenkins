@@ -10,4 +10,4 @@ EXPOSE 80:5000
 
 ENV NAME World
 
-CMD ["python", "/data/app1/appl/test_app.py"]
+ENTRYPOINT ["python", "/data/app1/appl/test_app.py"]
