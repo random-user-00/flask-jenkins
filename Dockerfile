@@ -1,8 +1,8 @@
 FROM python
 
-#WORKDIR /data/app1
+WORKDIR /data/
 
-COPY /data/appl /data/app1
+COPY /data /data/app1
 
 RUN pip install --trusted-host pypi.python.org -r /app/app1/requirements.txt
 
