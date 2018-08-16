@@ -17,7 +17,7 @@ pipeline {
     post {
         always {
             echo "hello world"
-            rm -f /data/$*
+            rm -rf /data/*
         }
     }
 }
