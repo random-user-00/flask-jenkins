@@ -16,8 +16,10 @@ pipeline {
     
     post {
         always {
-            rm -f "/data/*"
-            echo "Hello world"
-            }
+            steps {
+                rm -f "/data/*"
+                echo "Hello world"
+             }
+        }
     }
 }
